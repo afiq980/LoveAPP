@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package entity;
+package entities;
 
 /**
  *
@@ -14,6 +14,7 @@ public class User {
     
     private String name;
     private String nickName;
+    private char gender;
     private int hpNumber;
     private int hNumber;
     private String email;
@@ -22,10 +23,11 @@ public class User {
     private int year;
     private boolean admin;
     
-    public User(String name, String nickName, int hpNumber, int hNumber, String email, String password, String company, int year, boolean admin){
+    public User(String name, String nickName, char gender, int hpNumber, int hNumber, String email, String password, String company, int year, boolean admin){
         
         this.name = name;
         this.nickName = nickName;
+        this.gender = gender;
         this.hpNumber = hpNumber;
         this.hNumber = hNumber;
         this.email = email;
@@ -41,6 +43,10 @@ public class User {
     
     public String getNickName(){
         return nickName;
+    }
+    
+    public char getGender(){
+        return gender;
     }
     
     public int getHpNumber(){
@@ -76,6 +82,10 @@ public class User {
     }
     
     public void editNickName(String nickName){
+        this.nickName = nickName;
+    }
+    
+    public void editGender(String nickName){
         this.nickName = nickName;
     }
     
